@@ -1,19 +1,8 @@
-import imp
-from scissors import Scissors
-from paper import Paper
-from rock import Rock
-from lizard import Lizard
-from spock import Spock
 from ai import AI
 from human import Human
 
 class Showdown:
     def __init__(self):
-        scissor = Scissors
-        paper = Paper
-        rock = Rock
-        lizard = Lizard
-        spock = Spock
         ai = AI
         human = Human
 
@@ -22,8 +11,8 @@ class Showdown:
 
     def display_welcome(self):
         print("Lets get started, ready your hands.")
-        print("rules")
-        input("Multiplayer or single player y/n: ")
+        print("Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock.")
+        single_or_multi = input("Multiplayer or single player m/s: ")
 
     def battle(self):
         self.battle_ongoing = True

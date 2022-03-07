@@ -1,6 +1,7 @@
+from player import Player
+
 class AI:
     def __init__(self):
         self.name = "AI"
-        self.points = 0
-    
+        super().__init__(self)
     

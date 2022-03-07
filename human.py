@@ -1,4 +1,6 @@
+from player import Player
+
 class Human:
     def __init__(self):
         self.name = "player"
-        self.points = 0
+        super().__init__(self)
