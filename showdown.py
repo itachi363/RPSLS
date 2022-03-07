@@ -22,10 +22,13 @@ class Showdown:
 
     def display_welcome(self):
         print("Lets get started, ready your hands.")
+        print("rules")
+        input("Multiplayer or single player y/n: ")
 
     def battle(self):
         self.battle_ongoing = True
         while self.battle_ongoing == True:
+            print("display gestures")
             pass
 
     def ai_turn(self, AI):
