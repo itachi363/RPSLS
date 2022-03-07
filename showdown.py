@@ -8,6 +8,8 @@ class Showdown:
 
     def run_game(self):
         self.display_welcome
+        Human.set_player_name
+        AI.set_name
 
     def display_welcome(self):
         print("Lets get started, ready your hands.")
@@ -17,16 +19,16 @@ class Showdown:
     def battle(self):
         self.battle_ongoing = True
         while self.battle_ongoing == True:
-            print("display gestures")
-            pass
+            self.ai_turn
 
         if (p1_choice == p2_choice):
             print(f'  Tie no points awarded')
             elif(p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")):
             
         
-    def ai_turn(self, AI):
-        pass
+    def ai_turn(self, ai):
+        AI.choose_gesture
+        
 
     def human_turn(self, human):
         pass

@@ -1,4 +1,5 @@
 from player import Player
+import random
 
 # class Human:
 #     def __init__(self):
@@ -8,8 +9,7 @@ from player import Player
 class Human(Player):
         def __init__(self):
             super().__init__()
-            self.name = 
-            pass
+            self.name = ""
 
             
         def set_player_name(self):
