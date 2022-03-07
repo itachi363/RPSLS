@@ -1,16 +1,16 @@
-from ai import AI   
+from ai import AI
 from human import Human
 
 class Showdown:
     def __init__(self):
-        self.ai = AI
-        self.human = Human
+        self.ai = AI()
+        self.human = Human()
 
     def run_game(self):
         self.human.choose_gesture()
-        self.display_welcome
-        Human.set_player_name
-        AI.set_name
+        self.display_welcome()
+        Human.set_player_name()
+        AI.set_name()
 
     def display_welcome(self):
         print("Lets get started, ready your hands.")
@@ -28,12 +28,13 @@ class Showdown:
             
         
     def ai_turn(self, ai):
-        AI.choose_gesture
-        self.AI
-        pass
+        ai = self.ai.name
+        self.ai.choose_gesture()
+        
 
     def human_turn(self, human):
-        pass
+        human = self.human.name
+        self.human.choose_gesture()
 
     def show_ai_options(self):
         pass
@@ -43,4 +44,3 @@ class Showdown:
 
     def display_winners(self):
         pass
-
