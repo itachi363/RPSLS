@@ -20,6 +20,11 @@ class Showdown:
             print("display gestures")
             pass
 
+        if (p1_choice == p2_choice):
+            print(f'  Tie no points awarded')
+            elif(p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")):
+            
+        
     def ai_turn(self, AI):
         pass
 
