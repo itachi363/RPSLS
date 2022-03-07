@@ -1,12 +1,13 @@
-from ai import AI
+from ai import AI   
 from human import Human
 
 class Showdown:
     def __init__(self):
-        ai = AI
-        human = Human
+        self.ai = AI
+        self.human = Human
 
     def run_game(self):
+        self.human.choose_gesture()
         self.display_welcome
         Human.set_player_name
         AI.set_name
@@ -23,12 +24,13 @@ class Showdown:
 
         if (p1_choice == p2_choice):
             print(f'  Tie no points awarded')
-            elif(p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")):
+            # elif(p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")):
             
         
     def ai_turn(self, ai):
         AI.choose_gesture
-        
+        self.AI
+        pass
 
     def human_turn(self, human):
         pass
@@ -41,3 +43,4 @@ class Showdown:
 
     def display_winners(self):
         pass
+
