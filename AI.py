@@ -3,8 +3,10 @@ import random
 
 class AI(Player):
     def __init__(self):
+        super().__init__()
         self.name = ""
-        # super().__init__(self)
+        self.set_name
+
 
     def set_name(self):
         self.name = "Computer"

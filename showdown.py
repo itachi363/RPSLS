@@ -10,27 +10,29 @@ class Showdown:
 
 
     def run_game(self):
-        self.human.choose_gesture()
+        # self.player_one.choose_gesture()
         self.display_welcome()
-        Human.set_player_name()
-        AI.set_name()
+        # Human.set_player_name()
+        # AI.set_name()
+        self.determine_game_type()
+        self.create_round()
 
     def display_welcome(self):
         print("Lets get started, ready your hands.")
-        print("Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock.")
+        print(f"\nRock crushes Scissors \nScissors cuts Paper \nPaper covers Rock \nRock crushes Lizard \nLizard poisons Spock \nSpock smashes Scissors \nScissors decapitates Lizard \nLizard eats Paper \nPaper disproves Spock \nSpock vaporizes Rock.")
         # single_or_multi = input("Multiplayer or single player m/s: ")
 
 
     def determine_game_type(self):
-        game_choice = int(f'input{self.player_one}, Enter the number to choose your oppenent: \n1-Computer\n2-Human Oppenent\nYour Selection')
+        game_choice = int(input(f'{self.player_one}, Enter the number to choose your oppenent: \n1-Computer\n2-Human Oppenent\nYour Selection'))
         allowed_nums = [1,2]
         if game_choice in allowed_nums:
             if (game_choice == 1):
                 self.player_two = AI()
-                print(f' Oppenets confirmend: {self.player_one} vs. {self.player_two}')
+                print(f' Opponets confirmend: {self.player_one} vs. {self.player_two}')
             elif(game_choice == 2):
                 self.player_two = Human()
-                print(f' Oppents confirmed {self.player_one} vs. {self.player_two}')
+                print(f' Opponents confirmed {self.player_one} vs. {self.player_two}')
 
         else:
             self.determine_game_type
@@ -53,7 +55,7 @@ class Showdown:
         if (p1_choice ==  p2_choice):
             print(f'  Tie no points awarded')
         elif(p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")):
-            self.p1.wins(p1_choice, p2_choice)
+            self.p1_wins(p1_choice, p2_choice)
         elif(p1_choice == "Paper" and (p2_choice == "Rock" or p2_choice == "Spock")):
             self.p1_wins(p1_choice, p2_choice)
         elif(p1_choice == "Scissors" and (p2_choice == "Paper" or p2_choice == "Lizard")):
@@ -81,8 +83,10 @@ class Showdown:
     def overall_winner(self):
         if(self.player_one.wins == 2):
             print(f'{self.player_one} wins the game!')
-        else:
+        elif(self.player_two == 2):
             print(f'{self.player_two} wins the game!')
+        else:
+            print("Error")
         self.play_again()
 
 
