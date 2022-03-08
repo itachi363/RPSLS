@@ -24,7 +24,6 @@ class Showdown:
 
 
     def determine_game_type(self):
-        game_choice = int(input(f'{self.player_one.name}, Enter the number to choose your oppenent: \n1-Computer\n2-Human Oppenent\nYour Selection'))
         allowed_nums = [1,2]
         if game_choice in allowed_nums:
             if (game_choice == 1):
@@ -35,7 +34,8 @@ class Showdown:
                 print(f' Opponents confirmed {self.player_one.name} vs. {self.player_two.name}')
 
         else:
-            self.determine_game_type
+            print("Error, please select 1 or 2.")
+            self.determine_game_type()
 
 
     def create_round(self): # creates a round of gameplay. Best of 3

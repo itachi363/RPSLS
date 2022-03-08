@@ -17,6 +17,7 @@ class Human(Player):
             return self.gesture_list[self.choice -1]
 
         else:
+            print("Error, please select a number between 1 and 5")
             self.choose_gesture()
 
     def choose_gesture_player_two(self):
@@ -26,6 +27,7 @@ class Human(Player):
             return self.gesture_list[self.choice -1]
 
         else:
+            print("Error, please select a number between 1 and 5")
             self.choose_gesture()
 
     
