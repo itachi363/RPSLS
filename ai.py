@@ -22,3 +22,5 @@ class AI(Player):
     def _str_(self):
         return self.name    
 
+ 
+
