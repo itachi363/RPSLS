@@ -24,6 +24,7 @@ class Showdown:
 
 
     def determine_game_type(self):
+        game_choice = int(input(f'{self.player_one.name}, Enter the number to choose your oppenent: \n1-Computer\n2-Human Oppenent\nYour Selection: '))
         allowed_nums = [1,2]
         if game_choice in allowed_nums:
             if (game_choice == 1):
