@@ -38,6 +38,4 @@ class Human(Player):
     def _str_(self):
         return self.name
 
-        # call_function = choose_gesture()
-    
             

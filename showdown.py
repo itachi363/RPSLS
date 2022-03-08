@@ -10,17 +10,14 @@ class Showdown:
 
 
     def run_game(self):
-        # self.player_one.choose_gesture()
         self.display_welcome()
-        # Human.set_player_name()
-        # AI.set_name()
         self.determine_game_type()
         self.create_round()
 
     def display_welcome(self):
         print("Lets get started, ready your hands.")
         print(f"\nRock crushes Scissors \nScissors cuts Paper \nPaper covers Rock \nRock crushes Lizard \nLizard poisons Spock \nSpock smashes Scissors \nScissors decapitates Lizard \nLizard eats Paper \nPaper disproves Spock \nSpock vaporizes Rock.")
-        # single_or_multi = input("Multiplayer or single player m/s: ")
+      
 
 
     def determine_game_type(self):
@@ -70,13 +67,13 @@ class Showdown:
 
     
     def p1_wins(self, p1_choice, p2_choice): # Selects winner output and win counter
-        print(f'{p2_choice} beats {p1_choice}. {self.player_two.name} wins this round ! ')
+        print(f'{p1_choice} beats {p2_choice}. {self.player_one.name} wins this round ! ')
         self.player_one.set_wins()  
             
             
 
     def p2_wins(self, p1_choice, p2_choice):
-        print(f'{p2_choice} beats {p1_choice}. {self.player_one.name} wins this round ! ')
+        print(f'{p2_choice} beats {p1_choice}. {self.player_two.name} wins this round ! ')
         self.player_two.set_wins()
 
 
@@ -102,20 +99,3 @@ class Showdown:
                 
             
         
-    # def ai_turn(self, ai):
-    #     ai = self.ai.name
-    #     self.ai.choose_gesture()
-        
-
-    # def human_turn(self, human):
-    #     human = self.human.name
-    #     self.human.choose_gesture()
-
-    # def show_ai_options(self):
-    #     pass
-
-    # def show_human_options(self):
-    #     pass
-
-    # def display_winners(self):
-    #     pass
